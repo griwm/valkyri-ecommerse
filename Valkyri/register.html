@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="forms-container">
+            <!-- Register Form Only -->
+            <div class="form-section" id="registerForm">
+                <h2>Create Account</h2>
+                <p class="subtitle">Sign up for free</p>
+                <form onsubmit="return handleRegister(event)">
+                    <div class="form-group">
+                        <input type="text" id="registerName" required>
+                        <label for="registerName">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="registerEmail" required>
+                        <label for="registerEmail">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" required>
+                        <label for="registerPassword">Password</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirmPassword" required>
+                        <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALKYRI - Outdoor Gear & Equipment</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gear.css">
+</head>
+<body>
+  <!-- Navbar (same as index.html) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <button class="menu-btn mobile-only">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+        <a href="index.html" class="logo desktop-only">VALKYRI</a>
+      </div>
+      
+      <div class="mobile-logo mobile-only">
+        <a href="index.html" class="logo">VALKYRI</a>
+      </div>
+      
+      <div class="nav-center desktop-only">
+        <div class="nav-item" data-category="men">
+          <button onclick="location.href = 'men.html';">HERRE</button>
+        </div>
+        <div class="nav-item" data-category="women">
+          <button onclick="location.href = 'woman.html';">DAME</button>
+        </div>
+        <div class="nav-item" data-category="gear">
+          <button onclick="location.href = 'gear.html';">GEAR</button>
+        </div>
+        <div class="nav-item" data-category="activity">
+          <button onclick="location.href = 'activity.html';">ACTIVITY</button>
+        </div>
+        <div class="nav-item" data-category="technology">
+          <button onclick="location.href = 'technology.html';">TECHNOLOGY</button>
+        </div>
+        <a href="sale.html" class="nav-link">SALE</a>
+      </div>
+      
+      <div class="nav-right">
+        <button class="icon-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dropdown-overlay"></div>
+  
+  <div class="mega-menu" id="mega-menu">
+    <div class="mega-menu-container">
+      <div class="menu-grid">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Hero Section -->
+  <div class="hero-small tech-hero">
+    <div class="hero-content">
+      <h1>OUTDOOR GEAR & EQUIPMENT</h1>
+      <p>Professional-grade gear for every adventure</p>
+    </div>
+  </div>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+      <div class="category-grid">
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7" alt="Backpacks & Bags">
+          <div class="category-content">
+            <h3>Backpacks & Bags</h3>
+            <ul>
+              <li><a href="#">Alpine Packs</a></li>
+              <li><a href="#">Climbing Packs</a></li>
+              <li><a href="#">Daypacks</a></li>
+              <li><a href="#">Travel Bags</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056" alt="Climbing Equipment">
+          <div class="category-content">
+            <h3>Climbing Equipment</h3>
+            <ul>
+              <li><a href="#">Harnesses</a></li>
+              <li><a href="#">Carabiners</a></li>
+              <li><a href="#">Protection</a></li>
+              <li><a href="#">Ropes</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4" alt="Camping Gear">
+          <div class="category-content">
+            <h3>Camping Gear</h3>
+            <ul>
+              <li><a href="#">Tents</a></li>
+              <li><a href="#">Sleeping Bags</a></li>
+              <li><a href="#">Cooking Equipment</a></li>
+              <li><a href="#">Lighting</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256" alt="Navigation & Electronics">
+          <div class="category-content">
+            <h3>Navigation & Electronics</h3>
+            <ul>
+              <li><a href="#">GPS Devices</a></li>
+              <li><a href="#">Compasses</a></li>
+              <li><a href="#">Headlamps</a></li>
+              <li><a href="#">Power Banks</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" alt="Safety & Protection">
+          <div class="category-content">
+            <h3>Safety & Protection</h3>
+            <ul>
+              <li><a href="#">First Aid</a></li>
+              <li><a href="#">Emergency Shelters</a></li>
+              <li><a href="#">Safety Equipment</a></li>
+              <li><a href="#">Communication Devices</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1475666675596-cca2035b3d79" alt="Hydration & Food">
+          <div class="category-content">
+            <h3>Hydration & Food</h3>
+            <ul>
+              <li><a href="#">Water Bottles</a></li>
+              <li><a href="#">Filtration Systems</a></li>
+              <li><a href="#">Cooking Systems</a></li>
+              <li><a href="#">Food Storage</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Products</h2>
+        <p>Discover our selection of premium outdoor gear, crafted for performance and durability</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1494726161322-5360d4d0eeae" alt="Alpine Explorer Backpack">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-details">
+            <div class="product-category">Backpacks</div>
+            <h3 class="product-title">Alpine Explorer 45L</h3>
+            <div class="product-price">$229.99</div>
+            <button class="product-button">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7" alt="Pro Climbing Harness">
+            <span class="product-badge">Best Seller</span>
+          </div>
+          <div class="product-details">
+            <div class="product-category">Climbing</div>
+            <h3 class="product-title">Pro Climbing Harness</h3>
+            <div class="product-price">$149.99</div>
+            <button class="product-button">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d" alt="Ultralight Tent">
+          </div>
+          <div class="product-details">
+            <div class="product-category">Camping</div>
+            <h3 class="product-title">Ultralight 2P Tent</h3>
+            <div class="product-price">$399.99</div>
+            <button class="product-button">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1542124292-70791342b80c" alt="GPS Navigator Pro">
+            <span class="product-badge">Popular</span>
+          </div>
+          <div class="product-details">
+            <div class="product-category">Navigation</div>
+            <h3 class="product-title">GPS Navigator Pro</h3>
+            <div class="product-price">$299.99</div>
+            <button class="product-button">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Features -->
+  <section class="tech-features">
+    <div class="container">
+      <h2>Featured Technologies</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8" alt="DuraTech Material">
+          <div class="tech-content">
+            <h3>DuraTech Material</h3>
+            <p>Advanced fabric technology for maximum durability and weather resistance.</p>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306" alt="ClimateControl">
+          <div class="tech-content">
+            <h3>ClimateControl</h3>
+            <p>Innovative temperature regulation system for optimal comfort in any condition.</p>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+
+        <div class="tech-card">
+          <img src="https://images.unsplash.com/photo-1604537466158-719b1972feb8" alt="ErgoPro Design">
+          <div class="tech-content">
+            <h3>ErgoPro Design</h3>
+            <p>Ergonomic design principles for maximum comfort and performance.</p>
+            <a href="#" class="learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>VALKYRI</h3>
+          <p>Crafting premium outdoor gear for those who dare to explore the extraordinary.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Jackets</a></li>
+            <li><a href="#">Pants</a></li>
+            <li><a href="#">Outerwear</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>CONNECT</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Valkyri. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script/script.js"></script>
+</body>
+</html>

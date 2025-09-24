@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALKYRI - Outdoor Gear</title>
+  <link rel="icon" href="Shopify/goat logo.jpg" type="image/icon type">
+  <link rel="stylesheet" href="css/sale.css">
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <a href="index.html" class="logo">VALKYRI</a>
+        </div>
+        
+        <div class="nav-center desktop-only">
+          <div class="nav-item" data-category="men">
+            <button onclick="location.href = '/men.html';">HERRE</button>
+          </div>
+          <div class="nav-item" data-category="women">
+            <button onclick="location.href = '/woman.html';">DAME</button>
+          </div>
+          <div class="nav-item" data-category="gear">
+            <button onclick="location.href = '/gear.html';">GEAR</button>
+          </div>
+          <div class="nav-item" data-category="activity">
+            <button onclick="location.href = '/activity.html';">ACTIVITY</button>
+          </div>
+          <div class="nav-item" data-category="technology">
+            <button onclick="location.href = '/technology.html';">TECHNOLOGY</button>
+          </div>
+          <div class="nav-item" data-category="sale">
+            <button onclick="location.href = '/sale.html';">SALE</button>
+          </div>
+        </div>
+        
+        <div class="nav-right">
+          <button class="icon-btn menu-btn" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <button class="icon-btn cart-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="dropdown-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="/men.html">HERRE</a>
+      <a href="/woman.html">DAME</a>
+      <a href="/gear.html">GEAR</a>
+      <a href="/activity.html">ACTIVITY</a>
+      <a href="/technology.html">TECHNOLOGY</a>
+      <a href="/sale.html">SALE</a>
+    </div>
+    
+    <div class="mega-menu" id="mega-menu">
+      <div class="mega-menu-container">
+        <div class="menu-grid">
+        </div>
+      </div>
+    </div>
+    
+    <main>
+      <section class="sale-hero">
+        <div class="sale-hero-inner">
+          <h1>SEASON SALE</h1>
+          <p>Technical apparel and equipment at limited‑time prices</p>
+          <div class="sale-cta">
+            <button onclick="location.href='men.html'">Shop Men</button>
+            <button onclick="location.href='woman.html'">Shop Women</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sale-filter-bar">
+        <div class="sale-container">
+          <div class="filters">
+            <div class="filter-group">
+              <label>Category</label>
+              <select>
+                <option selected>All</option>
+                <option>Jackets</option>
+                <option>Midlayers</option>
+                <option>Base Layers</option>
+                <option>Pants</option>
+                <option>Packs</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label>Gender</label>
+              <select>
+                <option selected>All</option>
+                <option>Men</option>
+                <option>Women</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label>Size</label>
+              <select>
+                <option selected>All</option>
+                <option>XS</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>
+          </div>
+          <div class="sort">
+            <label>Sort by</label>
+            <select>
+              <option selected>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Biggest Discount</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="sale-grid-section">
+        <div class="sale-container">
+          <div class="sale-grid">
+            <article class="sale-card">
+              <div class="sale-image">
+                <img src="https://images.unsplash.com/photo-1519680772-8b5b0b36ee33?q=80&w=1887&auto=format&fit=crop" alt="Insulated Jacket">
+                <span class="discount-badge">30% OFF</span>
+              </div>
+              <div class="sale-details">
+                <h3>Alpine Insulated Jacket</h3>
+                <p class="category">Men's Outerwear</p>
+                <div class="price">
+                  <span class="price-current">$244</span>
+                  <span class="price-original">$349</span>
+                </div>
+                <button class="add-btn">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="sale-card">
+              <div class="sale-image">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1887&auto=format&fit=crop" alt="Shell Jacket">
+                <span class="discount-badge">25% OFF</span>
+              </div>
+              <div class="sale-details">
+                <h3>Stormproof Shell</h3>
+                <p class="category">Women's Outerwear</p>
+                <div class="price">
+                  <span class="price-current">$224</span>
+                  <span class="price-original">$299</span>
+                </div>
+                <button class="add-btn">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="sale-card">
+              <div class="sale-image">
+                <img src="https://images.unsplash.com/photo-1515615200917-196b4f3de0ba?q=80&w=1974&auto=format&fit=crop" alt="Expedition Pack">
+                <span class="discount-badge">20% OFF</span>
+              </div>
+              <div class="sale-details">
+                <h3>Expedition Pack 45L</h3>
+                <p class="category">Equipment</p>
+                <div class="price">
+                  <span class="price-current">$183</span>
+                  <span class="price-original">$229</span>
+                </div>
+                <button class="add-btn">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="sale-card">
+              <div class="sale-image">
+                <img src="https://images.unsplash.com/photo-1614252364467-58efa6492250?q=80&w=1974&auto=format&fit=crop" alt="Fleece Midlayer">
+                <span class="discount-badge">35% OFF</span>
+              </div>
+              <div class="sale-details">
+                <h3>Glacier Fleece</h3>
+                <p class="category">Midlayers</p>
+                <div class="price">
+                  <span class="price-current">$104</span>
+                  <span class="price-original">$159</span>
+                </div>
+                <button class="add-btn">Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <img src="/important/images/logo.png" alt="Valkyri logo" class="footer-logo">
+            <h3>VALKYRI</h3>
+            <p>Premium outdoor systems for mountain, trail and alpine environments.</p>
+          </div>
+          <div class="footer-section">
+            <h4>SHOP</h4>
+            <ul>
+              <li><a href="men.html">Men</a></li>
+              <li><a href="woman.html">Women</a></li>
+              <li><a href="gear.html">Gear</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>SUPPORT</h4>
+            <ul>
+              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="#">Warranty</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Valkyri. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  <script src="script/script.js"></script>
+  </body>
+</html>
