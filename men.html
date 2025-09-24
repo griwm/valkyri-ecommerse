@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men's Collection | VALKYRI</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/men.css">
+  <meta name="stripe-pk" content="pk_test_51RQmf2GdfBSUzsVFQQPo7v9LHaIljlG59w698uZIg8Lq97r1lwVGPLtv2MfBYlhCUal33U82G5AHR0vxRCpaxOxc00OYxRsSzy">
+  <script src="https://js.stripe.com/v3"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo">VALKYRI</a>
+      </div>
+      
+      <div class="nav-center desktop-only">
+        <div class="nav-item active" data-category="men">
+          <button onclick="location.href = '/men.html';">HERRE</button>
+        </div>
+        <div class="nav-item" data-category="women">
+          <button onclick="location.href = '/woman.html';">DAME</button>
+        </div>
+        <div class="nav-item" data-category="gear">
+          <button onclick="location.href = '/gear.html';">GEAR</button>
+        </div>
+        <div class="nav-item" data-category="activity">
+          <button onclick="location.href = '/activity.html';">ACTIVITY</button>
+        </div>
+        <div class="nav-item" data-category="technology">
+          <button onclick="location.href = '/technology.html';">TECHNOLOGY</button>
+        </div>
+        <div class="nav-item" data-category="sale">
+          <button onclick="location.href = '/sale.html';">SALE</button>
+        </div>
+      </div>
+      
+      <div class="nav-right">
+        <button class="icon-btn menu-btn" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <button class="icon-btn cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="dropdown-overlay"></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="/men.html">HERRE</a>
+    <a href="/woman.html">DAME</a>
+    <a href="/gear.html">GEAR</a>
+    <a href="/activity.html">ACTIVITY</a>
+    <a href="/technology.html">TECHNOLOGY</a>
+    <a href="/sale.html">SALE</a>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true" role="dialog" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button class="cart-close" aria-label="Close cart">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-content">
+      <div class="cart-empty">Your bag is empty.</div>
+      <div class="cart-items"></div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong class="cart-total-value">$0</strong>
+      </div>
+      <div class="payment-method">
+        <label for="payment-select">Payment method</label>
+        <select id="payment-select" class="payment-select">
+          <option value="card" selected>Card</option>
+          <option value="link">Link</option>
+          <option value="klarna">Klarna</option>
+        </select>
+      </div>
+      <button class="buy-btn" id="buy-now">Buy now</button>
+    </div>
+  </aside>
+  
+  <div class="mega-menu" id="mega-menu">
+    <div class="mega-menu-container">
+      <div class="menu-grid">
+      </div>
+    </div>
+  </div>
+
+  <!-- Men's Hero Section -->
+  <div class="mens-hero">
+    <div class="hero-content">
+      <h1>MEN'S COLLECTION</h1>
+      <p>Engineered for performance. Designed for the elements.</p>
+      <div class="hero-buttons">
+        <button onclick="location.href = '#jackets';">Shop Jackets</button>
+        <button onclick="location.href = '#featured';">New Arrivals</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter Section -->
+  <div class="filter-section">
+    <div class="container">
+      <div class="filter-container">
+        <div class="filter-group">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Jackets</button>
+          <button class="filter-btn">Pants</button>
+          <button class="filter-btn">Base Layers</button>
+          <button class="filter-btn">Fleece</button>
+          <button class="filter-btn">Outerwear</button>
+        </div>
+        <div class="filter-sort">
+          <select class="sort-select">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Products -->
+  <section class="mens-featured" id="featured">
+    <div class="container">
+      <h2>New Arrivals</h2>
+      <div class="mens-product-grid">
+        <div class="product-card" data-stripe-id="prod_StuhU9fzJXWYW6" data-price-id="price_1Ry6s4GdfBSUzsVFpwJDTiyW">
+          <div class="product-image">
+            <img src="https://www.fjellsport.no/assets/blobs/swedteam-pro-3l-jacket-1-f60f83180a.jpeg?preset=tiny&dpr=2" alt="Alpha Pro Jacket">
+            <div class="product-badge">New</div>
+          </div>
+          <div class="product-details">
+            <h3>Alpha Pro Jacket</h3>
+            <p class="product-category">Outerwear</p>
+            <div class="product-price">$349</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #3a5a78;"></span>
+              <span class="color-dot" style="background-color: #5b7553;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://www.skistarshop.com/_next/image?url=https%3A%2F%2Fshoplab.b-cdn.net%2Fskistar_production%2Fmedia-library%2F46410%2FA815560_c_1.png&w=384&q=75" alt="Trail Blazer Pants">
+            <div class="product-badge">New</div>
+          </div>
+          <div class="product-details">
+            <h3>Trail Blazer Pants</h3>
+            <p class="product-category">Pants</p>
+            <div class="product-price">$189</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #4a4a4a;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://antonclub-res.cloudinary.com/image/upload/w_4096,a_0,c_limit,g_center,q_auto/imx4jjyta0aboktrzqkw.avif" alt="Summit Soft Shell">
+            <div class="product-badge">New</div>
+          </div>
+          <div class="product-details">
+            <h3>Summit Soft Shell</h3>
+            <p class="product-category">Jackets</p>
+            <div class="product-price">$229</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #3a5a78;"></span>
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #793937;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://vpgno.b-cdn.net/thumbnail/ae/4f/c8/1714995269/d14dbd05-3b44-4913-a474-37e1f7f3_1920x1920.png?ts=1714995443" alt="Alpine Base Layer">
+          </div>
+          <div class="product-details">
+            <h3>Alpine Base Layer</h3>
+            <p class="product-category">Base Layers</p>
+            <div class="product-price">$89</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #506d85;"></span>
+              <span class="color-dot" style="background-color: #7d7d7d;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jackets Collection -->
+  <section class="mens-collection" id="jackets">
+    <div class="container">
+      <h2>Premium Jackets</h2>
+      <div class="mens-product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://media.zeproc.com/media/catalog/product/cache/89c597c5142d481043b34c4576f49c28/_/7/_7090-17-1-10mar2025.png" alt="Vertex Pro Shell">
+            <div class="product-badge">Best Seller</div>
+          </div>
+          <div class="product-details">
+            <h3>Vertex Pro Shell</h3>
+            <p class="product-category">Jackets</p>
+            <div class="product-price">$399</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #3a5a78;"></span>
+              <span class="color-dot" style="background-color: #5b7553;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://pricespy-75b8.kxcdn.com/product/standard/280/7277121.jpg" alt="Alpine Insulator">
+          </div>
+          <div class="product-details">
+            <h3>Alpine Insulator</h3>
+            <p class="product-category">Jackets</p>
+            <div class="product-price">$299</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #506d85;"></span>
+              <span class="color-dot" style="background-color: #793937;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.ka-yo.com/product/1000f1239/the-north-face-m-summit-pumori-down-parka_18.jpg" alt="Summit Down Jacket">
+          </div>
+          <div class="product-details">
+            <h3>Summit Down Jacket</h3>
+            <p class="product-category">Jackets</p>
+            <div class="product-price">$449</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #3a5a78;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://www.brekkesport.no/images/thumbs/0054216_helly-hansen-cascade-shield-jacket-xl.jpeg" alt="Cascade Rain Shell">
+          </div>
+          <div class="product-details">
+            <h3>Cascade Rain Shell</h3>
+            <p class="product-category">Jackets</p>
+            <div class="product-price">$259</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #506d85;"></span>
+              <span class="color-dot" style="background-color: #5b7553;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-all-container">
+        <a href="#" class="view-all-btn">View All Jackets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Collection -->
+  <section class="mens-feature-highlight">
+    <div class="feature-content">
+      <div class="feature-text">
+        <h2>EXPEDITION SERIES</h2>
+        <p>Our most technically advanced collection, designed for extreme mountain conditions and tested by professional alpinists in the world's harshest environments.</p>
+        <a href="#" class="feature-btn">Explore Collection</a>
+      </div>
+      <div class="feature-image">
+        <img src="https://images.pexels.com/photos/848618/pexels-photo-848618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Expedition Series">
+      </div>
+    </div>
+  </section>
+
+  <!-- Base Layers Collection -->
+  <section class="mens-collection">
+    <div class="container">
+      <h2>Performance Base Layers</h2>
+      <div class="mens-product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://www.janus.no/cdn/shop/files/4523240-182.jpg?v=1689589335&width=980" alt="ThermoFusion Crew">
+          </div>
+          <div class="product-details">
+            <h3>ThermoFusion Crew</h3>
+            <p class="product-category">Base Layers</p>
+            <div class="product-price">$79</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #506d85;"></span>
+              <span class="color-dot" style="background-color: #7d7d7d;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://www.janus.no/cdn/shop/files/4523240-182.jpg?v=1689589335&width=980" alt="Alpine Merino Zip">
+          </div>
+          <div class="product-details">
+            <h3>Alpine Merino Zip</h3>
+            <p class="product-category">Base Layers</p>
+            <div class="product-price">$99</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #506d85;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://www.xxl.no/filespin/65ebc8b4790e49e0bc1dcd42bec2b840?quality=75&bgcolor=efefef&resize=640%2C640" alt="TechWick Thermal">
+          </div>
+          <div class="product-details">
+            <h3>TechWick Thermal</h3>
+            <p class="product-category">Base Layers</p>
+            <div class="product-price">$89</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #3a5a78;"></span>
+              <span class="color-dot" style="background-color: #7d7d7d;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQWFyPGOHfgNAbYCqqIj0U_9oL4XthIb9wLzbcVPTyRa8Bfazb7InFn27FsmF4KIoYQOmpJhxrfiaLnteDZWREDSxBSW4nXIw" alt="Summit Wool Blend">
+          </div>
+          <div class="product-details">
+            <h3>Summit Wool Blend</h3>
+            <p class="product-category">Base Layers</p>
+            <div class="product-price">$109</div>
+            <div class="product-colors">
+              <span class="color-dot" style="background-color: #1a1a1a;"></span>
+              <span class="color-dot" style="background-color: #506d85;"></span>
+              <span class="color-dot" style="background-color: #5b7553;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-all-container">
+        <a href="#" class="view-all-btn">View All Base Layers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to receive notifications about new products, exclusive offers, and outdoor inspiration.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>VALKYRI</h3>
+          <p>Crafting premium outdoor gear for those who dare to explore the extraordinary.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Jackets</a></li>
+            <li><a href="#">Pants</a></li>
+            <li><a href="#">Outerwear</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="/important/about.html">About Us</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>CONNECT</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Valkyri. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script/men.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
